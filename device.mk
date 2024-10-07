@@ -6,6 +6,10 @@
 #
 
 LOCAL_PATH := device/motorola/eqe
+
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -26,6 +30,10 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libgptutils \
     libz \
     libcutils
+
+# OEM otacert
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    $(LOCAL_PATH)/security/ota
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
