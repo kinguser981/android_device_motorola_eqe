@@ -9,14 +9,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from eqe device
 $(call inherit-product, device/motorola/eqe/device.mk)
 
 PRODUCT_DEVICE := eqe
-PRODUCT_NAME := omni_eqe
+PRODUCT_NAME := twrp_eqe
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := motorola edge 50 pro
 PRODUCT_MANUFACTURER := motorola
